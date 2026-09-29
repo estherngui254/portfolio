@@ -1,5 +1,8 @@
 # Esther Syombua — Portfolio
 
+**Live site: <https://estherngui254.github.io/portfolio/>**
+**Source: <https://github.com/estherngui254/portfolio>**
+
 A minimalist, responsive portfolio site built from Esther Syombua's CV
 (BSc. Horticulture, JKUAT).
 
@@ -34,6 +37,33 @@ No build step. Open `index.html` directly in a browser, or serve it:
 # PowerShell (Python 3)
 python -m http.server 8080
 # then visit http://localhost:8080
+```
+
+Or use the bundled dependency-free server (no Python/Node needed):
+
+```powershell
+.\serve.ps1 -Open        # serves on http://localhost:8080 and opens a browser
+.\serve.ps1 -Port 3000   # use a different port
+```
+
+## Deploy
+
+Hosted on **GitHub Pages** from the `main` branch, root (`/`).
+
+To publish changes:
+
+```powershell
+$env:Path += ';C:\Program Files\Git\cmd'
+git add -A
+git commit -m "Describe your change"
+git push origin main
+```
+
+Pages rebuilds automatically — the site updates in roughly 1–2 minutes.
+Check status with:
+
+```powershell
+& "C:\Program Files\GitHub CLI\gh.exe" api repos/estherngui254/portfolio/pages -q .status
 ```
 
 ## Interactions
